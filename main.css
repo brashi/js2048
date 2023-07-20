@@ -6,6 +6,8 @@
     right:0px;
     bottom:0px;
     left:0px;
+    font-family:clear sans,helvetica neue,Arial,sans-serif;
+    font-size:18px
 }
 
 .static-grid {
@@ -51,7 +53,7 @@
     box-sizing: border-box;
 }
 
-.tiles-grid {
+.tile-grid {
     position: absolute;
     z-index: 2;
 }
@@ -63,7 +65,17 @@
     -webkit-animation-fill-mode: backwards;
     -moz-animation-fill-mode: backwards;
     animation-fill-mode: backwards;
-  }
+}
+
+.tile-merged .tile-inner {
+    z-index: 20;
+    -webkit-animation: pop 200ms ease 100ms;
+    -moz-animation: pop 200ms ease 100ms;
+    animation: pop 200ms ease 100ms;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
 
 .tile {
     height: 107px;
@@ -78,8 +90,10 @@
 
     transition: 100ms ease-in-out;
     transition-property: transform;
-}
 
+    font-weight:700;
+    font-size:55px
+}
 
 .tile.pos-0-0 {
     transform: translate(0px,0px);
